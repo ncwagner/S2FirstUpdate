@@ -55,9 +55,8 @@
         {% if user.is_authenticated %}
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link dropdown-toggle" href="#" id="userMenu"\
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded\
-              ="false">
+              <a class="nav-link dropdown-toggle" href="#" id="userMenu" \
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{ user.username }}
               </a>
               <div class="dropdown-menu dropdown-menu-right"
@@ -82,13 +81,13 @@
 
 </head>
 <body>
-    <h1>Track Calories - Meal Prep - Find Workouts</h1>
+    <p align = "left"><h1>Track Calories - Meal Prep - Find Workouts</h1></p>
     <p> </p>
     <p>Calorie Tracker allows you to track all your calories, find delicious and nutritious recipes for meal prep, and find workouts to help you stay active.</p>
 
     <body1></body1>
     <footer></footer>
-    <h2>Main Features/Benefits</h2>
+    <h2>Main Features & Benefits</h2>
     <p></p>
     <p>This app allows you to stay on top of your health. Our meal prep recipes are nutritious, delicious and have their calories include for easier tracking. Our workouts also include approximate calories burnt and the following:</p>
 
@@ -101,9 +100,50 @@
     <img src="{% static "images/green checkmark.JPG" %}" alt="Logo" width="70" height="65" style="display: inline-list-item"/>
         <p3>Workouts - We provide different workouts for each customer.</p3>
 
-    <body1></body1>
     <footer></footer>
-    <h2>Get in Touch</h2>
+    <body><h2>Calorie Tracker Formula & Arithmetic</h2>
+    The Calorie Tracker Calculator takes multiple factors into account when determining results.
+    By utilizing Mifflin-St Jeor and Harris-Benedict formulas, the Calorie Tracker Calculator can
+    accurately obtain results for body mass index and metalbolic rate(s) - amount of energy expended.</body>
+
+    <H4>Calorie Tracker For Men</H4>
+    <body>Mifflin-St Jeor Equation : 10W + 6.25H  - 5A + 5</body><br>
+    <body>Harris-Benedict Equation : 13.397W + 4.799H - 5.677A + 88.362</body>
+    <H4>Calorie Tracker For Women</H4>
+    <body>Mifflin-St Jeor Equation : 10W + 6.25H - 5A - 161</body><br>
+    <body>Harris-Benedict Equation : 9.247W + 3.098H - 4.330A + 447.593</body>
+    <body1></body1>
+    <body>** NOTE ** : <br>
+        W = Weight in kilograms (kg) <br>
+        H = Height in centimeters (cm) <br>
+        A = Age</body>
+
+    <body1></body1>
+    <h1>Why these formulas?</h1>
+    <body3>The value obtained from these equations is the estimated number of calories a person can consume in a day to
+    maintain their body-weight, assuming they remain at rest. This value is multiplied by an activity factor
+    (generally 1.2-1.95), dependent on a person's typical levels of exercise, in order to obtain a more realistic value
+    for maintaining body-weight (since people are less likely to be at rest throughout the course of an entire day).
+    1 pound, or approximately 0.45 kg, equates to about 3,500 calories. As such, in order to lose 1 pound per week, it
+    is recommended that 500 calories be shaved off the estimate of calories necessary for weight maintenance per day.
+    For example, if a person has an estimated allotment of 2,500 calories per day to maintain body-weight, consuming
+    2,000 calories per day for one week would theoretically result in 3,500 calories (or 1 pound) lost during the
+        period.<br></body3>
+    <body3>
+    It is important to remember that proper diet and exercise is largely accepted as the best way to lose weight.
+    It is inadvisable to lower calorie intake by more than 1,000 calories per day, as losing more than 2 pounds per
+    week can be unhealthy, and can result in the opposite effect in the near future by reducing metabolism. Losing more
+    than 2 pounds a week will likely involve muscle loss, which in turn lowers BMR, since more muscle mass results in
+    higher BMR. Excessive weight loss can also be due to dehydration, which is unhealthy. Furthermore, particularly
+    when exercising in conjunction with dieting, maintaining a good diet is important, since the body needs to be able
+    to support its metabolic processes and replenish itself. Depriving the body of the nutrients it requires as part of
+    heavily unhealthy diets can have serious detrimental effects, and weight lost in this manner has been shown in some
+    studies to be unsustainable, since the weight is often regained in the form of fat (putting the participant in a
+    worse state than when beginning the diet). As such, in addition to monitoring calorie intake, it is important to
+    maintain levels of fiber intake as well as other nutritional necessities to balance the needs of the body.</body3>
+
+    <footer></footer>
+    <h1>Get in Touch</h1>
         <p2>If you need to contact us for any support, please message us below</p2>
         <form>
            <label for="fname">First name:</label><br>
@@ -116,11 +156,16 @@
            <input type="text" id="text box" name="textBox"><br>
            <input type="submit" value="Submit"><br>
         </form>
-</body>
+</body3>
 
 <footer>
+    <h4>Email Us!</h4>
   <p>Authors: Noah Wagner, Corey Snavely, Zach Thornhill, Mark Kroeker</p>
-  <p><a href="mailto:ncwagner@unomaha.edu">ncwagner@unomaha.edu</a></p>
+  <p><a href="mailto:ncwagner@unomaha.edu">Noah Wagner</a></p>
+  <p><a href="mailto:zthornhill@unomaha.edu">Zach Thornhill</a></p>
+  <p><a href="mailto:csnavely@unomaha.edu">Corey Snavely</a></p>
+  <p><a href="mailto:mrkroeker@unomaha.edu">Mark Kroeker</a></p>
+
 </footer>
 
 <style>
@@ -156,6 +201,12 @@ h3 {
  color: black;
  font-size: 15px;
  position: absolute;
+}
+
+h4 {
+ font-family: "Palatino Linotype", Palatino, serif;
+ font-size: 15px;
+ color: black;
 }
 
 p1 {
@@ -216,6 +267,14 @@ body {
 body1 {
     padding: 50px;
     display: block;
+}
+
+body3 {
+    padding: 50px;
+    color: black;
+    display: block;
+    font-family: "Palatino Linotype", Palatino, serif;
+    text-align: center;
 }
 
 a {
